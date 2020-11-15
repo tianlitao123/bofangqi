@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#382910">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/bigtitle"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/smalltitle"
+            android:text="@string/music"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#afafaf"
+        android:layout_below="@+id/bigtitle"/>
+    <ImageView
+        android:id="@+id/disc"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bigtitle"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/nan"/>
+    <ImageView
+        android:id="@+id/needle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/bigtitle"
+
+        android:layout_marginLeft="150dp"/>
+
+    <RelativeLayout
+        android:id="@+id/music1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <SeekBar
+            android:id="@+id/music_seek_bar"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtLoopState"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/music_seek_bar"/>
+
+        <TextSwitcher
+            android:id="@+id/text_switcher"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/music_seek_bar">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_00_00_2_00"
+                android:textColor="@color/colorAccent"/>
+        </TextSwitcher>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:id="@+id/rl"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/buttonPRE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/pre"/>
+        <Button
+            android:id="@+id/buttonLOOP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/loop"
+            />
+        <Button
+            android:id="@+id/buttonRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/random"
+            />
+        <Button
+            android:id="@+id/buttonPAUSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause" />
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/start" />
+        <Button
+            android:id="@+id/buttonSTOP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop" />
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/next"/>
+        //
+
+    </LinearLayout>
+</RelativeLayout>
+
